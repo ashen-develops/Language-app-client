@@ -1,0 +1,15 @@
+body{
+    display: flex;
+    text-align: center;
+}
+h1 {
+    font-size: 35px;
+}
+h1 a {
+    text-decoration: none;
+}
+
+nav {
+    justify-content: space-between;
+
+}
