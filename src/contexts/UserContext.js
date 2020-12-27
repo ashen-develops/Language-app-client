@@ -11,6 +11,20 @@ const UserContext = React.createContext({
   setUser: () => {},
   processLogin: () => {},
   processLogout: () => {},
+
+  language: null,
+  words: null,
+  currentWord: {},
+  nextWord: {},
+  guess: null,
+  score: null,
+
+  setLanguage: () => { },
+  setWords: () => { },
+  setCurrentWord: () => { },
+  setNextWord: () => { },
+  setGuess: () => { },
+  setScore: () => { },
 })
 
 export default UserContext
@@ -58,6 +72,22 @@ export class UserProvider extends Component {
 
   setUser = user => {
     this.setState({ user })
+  }
+
+  setLanguage = language => {
+    this.setState({ language })
+  }
+
+  setWords = words => {
+    this.setState({ words })
+  }
+
+  setCurrentWord = currentWord => {
+    this.setState({ currentWord })
+  }
+
+  setNextWord = nextWord => {
+    this.setState({ nextWord })
   }
 
   processLogin = authToken => {
