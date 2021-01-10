@@ -72,6 +72,9 @@ class DashboardRoute extends Component {
         <Link to="/learn" className="start-btn">
           <Button className="start-button">Start Practicing</Button>
         </Link>
+        <Link to="/study" className="start-btn">
+          <Button className="start-button">Study Up</Button>
+        </Link>
         <h3 className="dash-list-title">Words To Practice</h3>
         <div className="word-list">
           {this.context.words

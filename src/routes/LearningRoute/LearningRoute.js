@@ -2,6 +2,8 @@ import React from "react";
 import TokenService from "../../services/token-service";
 import config from "../../config";
 import UserContext from "../../contexts/UserContext";
+import { Link } from "react-router-dom";
+import Button from "../../components/Button/Button";
 
 class LearningRoute extends React.Component {
   static contextType = UserContext;
@@ -41,7 +43,7 @@ class LearningRoute extends React.Component {
       );
     } else {
       this.context.setCurrentWord(this.context.nextWord);
-      this.context.setGuess(e.target.userinput.value);
+      this.context.setGuess(e.target.userinput.value.charAt(0).toUpperCase() + e.target.userinput.value.slice(1));
       //integral to the input box being hidden
       this.setState({ results: !this.state.results });
 
@@ -51,7 +53,7 @@ class LearningRoute extends React.Component {
           "content-type": "application/json",
           authorization: `bearer ${TokenService.getAuthToken()}`,
         },
-        body: JSON.stringify({ guess: e.target.userinput.value }),
+        body: JSON.stringify({ guess: e.target.userinput.value.charAt(0).toUpperCase() + e.target.userinput.value.slice(1) }),
       })
         .then((res) => res.json())
         .then((json) => {
@@ -111,6 +113,9 @@ class LearningRoute extends React.Component {
     return (
       <div>
         <h2>Learn Some Finnish</h2>
+        <p>or <Link to="/" className="start-btn">
+                <Button className="start-button">study some more</Button>
+        </Link> </p>
         <h3>Some Useful Pronounciation Tips</h3>
         <ul>
           <li>A: pronounced like the "u" in "cup"</li>
