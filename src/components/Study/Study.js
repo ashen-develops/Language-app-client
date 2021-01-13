@@ -9,8 +9,7 @@ function ListOfWords(props) {
   return (
     <li>
       <h4>{props.word.original}<span> = </span>{props.word.translation}</h4>
-      <div>
-      </div>
+      <hr></hr>
     </li>
   );
 }
@@ -26,7 +25,7 @@ class Study extends Component {
       result.push(<ListOfWords key={key} word={word} />);
     });
     // return {result}
-    return <p>{result}</p>;
+    return <div>{result}</div>;
   }
 
   render() {

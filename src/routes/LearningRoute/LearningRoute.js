@@ -113,25 +113,25 @@ class LearningRoute extends React.Component {
     return (
       <div>
         <h2>Learn Some Finnish</h2>
-        <p>or <Link to="/" className="start-btn">
+        <div>or <Link to="/" className="start-btn">
                 <Button className="start-button">study some more</Button>
-        </Link> </p>
+        </Link> </div>
         <h3>Some Useful Pronounciation Tips</h3>
-        <ul>
-          <li>A: pronounced like the "u" in "cup"</li>
-          <li>Ä (with umlaut): sounds close to the "a" in "hat"</li>
-          <li>E: pronounced like "e" in "hen"</li>
-          <li>I: sounds like "i" in "tip"</li>
-          <li>
+        <ul className="tips">
+          <li className="textfield">A: pronounced like the "u" in "cup"</li>
+          <li className="textfield">Ä (with umlaut): sounds close to the "a" in "hat"</li>
+          <li className="textfield">E: pronounced like "e" in "hen"</li>
+          <li className="textfield">I: sounds like "i" in "tip"</li>
+          <li className="textfield">
             Y: close to the "u" in the British pronunciation of "you" with tight
             lips
           </li>
-          <li>
+          <li className="textfield">
             Ö (with umlaut): pronounced like the "u" in "fur" with tight lips
           </li>
         </ul>
         <h2>Translate this word:</h2>
-        <span>
+        <span className="word">
           {this.context.nextWord
             ? this.state.results
               ? this.context.currentWord.nextWord

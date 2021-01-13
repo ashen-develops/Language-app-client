@@ -9,13 +9,17 @@ function ListOfWords(props) {
   return (
     <li>
       <h4>{props.word.original}</h4>
-      <div>
-        <span className="correct-count">
-          correct answer count: {props.word.correct_count}
-        </span>
-        <span className="incorrect-count">
-          incorrect answer count: {props.word.incorrect_count}
-        </span>
+      <div className="listCount">
+        <div className="textfield">
+          <span className="correct-count">
+            correct answer count: {props.word.correct_count}
+          </span>
+        </div>
+        <div className="textfield">
+          <span className="incorrect-count">
+            incorrect answer count: {props.word.incorrect_count}
+          </span>
+        </div>
       </div>
     </li>
   );
@@ -57,7 +61,7 @@ class DashboardRoute extends Component {
       result.push(<ListOfWords key={key} word={word} />);
     });
     // return {result}
-    return <p>{result}</p>;
+    return <div>{result}</div>;
   }
 
   render() {
@@ -75,7 +79,7 @@ class DashboardRoute extends Component {
         <Link to="/study" className="start-btn">
           <Button className="start-button">Study Up</Button>
         </Link>
-        <h3 className="dash-list-title">Words To Practice</h3>
+        <h3>Words To Practice</h3>
         <div className="word-list">
           {this.context.words
             ? this.generateWordList(this.context.words)
