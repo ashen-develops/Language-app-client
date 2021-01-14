@@ -112,7 +112,7 @@ class LearningRoute extends React.Component {
   render() {
     return (
       <div>
-        <h2>Learn Some Finnish</h2>
+        <h3>Learn Some Finnish</h3>
         <div>or <Link to="/" className="start-btn">
                 <Button className="start-button">study some more</Button>
         </Link> </div>
@@ -130,7 +130,7 @@ class LearningRoute extends React.Component {
             Ö (with umlaut): pronounced like the "u" in "fur" with tight lips
           </li>
         </ul>
-        <h2>Translate this word:</h2>
+        <h2>Translate the word:</h2>
         <span className="word">
           {this.context.nextWord
             ? this.state.results

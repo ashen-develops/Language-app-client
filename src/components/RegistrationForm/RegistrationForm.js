@@ -41,7 +41,7 @@ class RegistrationForm extends Component {
     const { error } = this.state
     return (
       <div>
-      <p>Demo Account Available on Login Page</p>
+      {/* <p>Demo Account Available on Login Page</p> */}
       <form
         onSubmit={this.handleSubmit}
       >
@@ -50,7 +50,7 @@ class RegistrationForm extends Component {
         </div>
         <div className="textfield">
           <Label htmlFor='registration-name-input'>
-            Enter your name:<Required />
+            Enter your name<Required />
           </Label>
           <Input
             ref={this.firstInput}
@@ -61,7 +61,7 @@ class RegistrationForm extends Component {
         </div>
         <div className="textfield">
           <Label htmlFor='registration-username-input'>
-            Choose a username:<Required />
+            Choose a username<Required />
           </Label>
           <Input
             id='registration-username-input'
@@ -71,7 +71,7 @@ class RegistrationForm extends Component {
         </div>
         <div className="textfield">
           <Label htmlFor='registration-password-input'>
-            Choose a password:<Required />
+            Choose a password<Required />
           </Label>
           <Input
             id='registration-password-input'

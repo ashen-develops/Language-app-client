@@ -69,22 +69,30 @@ class DashboardRoute extends Component {
     return (
       //context.language if/else statement
       <div className="dashboard">
+        <section>
         <h2 className="dash-language-header">
           {this.context.language ? this.context.language.name : null}
         </h2>
+        </section>
         {/* link to learning page w/ button */}
+        <section>
         <Link to="/learn" className="start-btn">
-          <Button className="start-button">Start Practicing</Button>
+          <Button className="start-button">Start practicing</Button>
         </Link>
-        <Link to="/study" className="start-btn">
+        {/* <Link to="/study" className="start-btnn">
           <Button className="start-button">Study Up</Button>
-        </Link>
-        <h3>Words To Practice</h3>
+        </Link> */}
+        </section>
+        <section>
+          <h3>Words to practice</h3>
+        </section>
+        <section>
         <div className="word-list">
           {this.context.words
             ? this.generateWordList(this.context.words)
             : null}
         </div>
+        </section>
         <section className="total-correct">
           <h4>
             {this.context.language
