@@ -65,6 +65,9 @@ button {
 li {
   list-style-type: none;
 }
+span {
+  margin: 0 20px;
+}
 
 .textfield{
   margin: 10px;

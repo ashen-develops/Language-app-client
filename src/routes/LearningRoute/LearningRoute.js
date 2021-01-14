@@ -99,6 +99,7 @@ class LearningRoute extends React.Component {
       typeof this.context.nextWord.isCorrect !== "undefined"
     ) {
       return `The correct translation for ${this.context.currentWord.nextWord} was ${this.context.nextWord.answer} and you chose ${this.context.guess}!`;
+      
     }
   }
 
