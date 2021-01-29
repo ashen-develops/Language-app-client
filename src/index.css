@@ -14,6 +14,10 @@ body {
   background-color: rgb(66, 75, 84);
 }
 
+div#root {
+    width: 100%;
+}
+
 header {
   background-color: rgb(126, 189, 194);
   padding: 10px;
